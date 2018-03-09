@@ -1,0 +1,83 @@
+.work-section {
+    margin-top: 125px;
+    h2, p {
+        text-align: center;
+    }
+    h2 {
+        font-size: 24px;
+        color: $txt-dark-grey;
+        line-height: 24px;
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background-color: $bg-light-green;
+        }
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 22px;
+        color: $txt-light-grey;
+        margin-top: 25px;
+    }
+}
+
+.our-work {
+    margin-top: 40px;
+    @include mq (1170px) {
+        width: 767px;
+        margin: 40px auto 0;
+    }
+    @include mq (767px) {
+        margin: 40px auto 0;
+        max-width: 320px;
+        width: 100%;
+    }
+}
+
+.work {
+    display: inline-block;
+    width: 370px;
+    margin-right: 26px;
+    position: relative;
+    &:nth-child(3) {
+        margin-right: 0;
+    }
+    img {
+        width: 100%;
+    }
+    span {
+        font-size: 60px;
+        color: $theme-green;
+        position: absolute;
+        top: 62%;
+        left: 0;
+        @include mq (1170px) {
+            top: 44%;
+        }
+        @include mq (767px) {
+            top: 54%;
+        }
+    }
+    h3 {
+        margin-top: 50px;
+        text-transform: uppercase;
+    }
+    p {
+        text-align: left;
+        font-size: 14px;
+        line-height: 24px;
+        color: $txt-light-grey;
+    }
+    @include mq (1170px) {
+        width: 236px
+    }
+    @include mq (767px) {
+        width: 100%;
+        margin-right: 0;
+        padding: 0px 5px;
+    }
+}

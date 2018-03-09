@@ -1,0 +1,160 @@
+.map {
+    width: 100%;
+    height: 750px;
+    position: relative;
+    margin-top: 135px;
+    padding: 120px 0 0 135px;
+    @include mq (1269px) {
+        padding: 0;
+    }
+}
+
+.location-info-container {
+    width: 753px;
+    @include mq (1269px) {
+        width: 100%;
+    }
+}
+
+.location-img {
+    width: 252px;
+    display: inline-block;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @include mq (1269px) {
+        display: none;
+    }
+}
+
+.location-info {
+    width: 500px;
+    background-color: $white;
+    float: right;
+    padding: 40px 40px 0 60px;
+    @include mq (767px) {
+        padding: 0px 40px 0 10px;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 24px;
+        color: $txt-dark-grey;
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 40px;
+            background-color: $bg-light-green;
+            margin-top: 25px;
+        }
+    }
+    p {
+        margin-top: 38px;
+        font-size: 14px;
+        line-height: 23px;
+        color: $txt-light-grey;
+        @include mq (767px) {
+            font-size: 14px;
+        }
+    }
+    h6 {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        color: $txt-dark-grey;
+    }
+    @include mq (1269px) {
+        width: 100%;
+        float: none;
+    }
+}
+
+.travel-time {
+    display: inline-block;
+    width: 72px;
+    text-align: center;
+    margin: 30px 35px 35px 0;
+    @include mq (767px) {
+        margin: 30px 0 10px 0;
+    }
+    span {
+        display: block;
+    }
+    .city-name {
+        margin-bottom: 5px;
+        color: $txt-dark-grey;
+        font-size: 18px;
+        font-weight: bold;
+        @include mq (767px) {
+            font-size: 11px;
+        }
+    }
+    .time-info {
+        color: $txt-light-grey;
+        font-size: 16px;
+        font-style: italic;
+        @include mq (767px) {
+            font-size: 10px;
+        }
+    }
+}
+
+.location-icons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $theme-green;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 auto 10px;
+    color: $white;
+    font-size: 25px;
+    @include mq (767px) {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+.location-pin {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: $bg-light-green;
+    right: 225px;
+    bottom: 24%;
+    text-align: center;
+    padding-top: 27px;
+    animation: pinAnimation 1s linear 2s infinite alternate;
+    .arrow-down {
+        @include arrow-down(10px, $bg-light-green);
+        position: absolute;
+        bottom: -9px;
+        left: 34px;
+        box-shadow: 2px 16px 22px;
+        @include mq (767px) {
+            left: 20px;
+        }
+    }
+    .pin {
+        color: $white;
+        font-size: 30px;
+        @include mq (767px) {
+            font-size: 18px;
+        }
+    }
+    @include mq (767px) {
+        width: 60px;
+        height: 60px;
+        padding-top: 21px;
+        right: 243px;
+    }
+}
+
+@keyframes pinAnimation {
+    0% {bottom: 24%;}
+    100% { bottom: 23.3%;}
+}

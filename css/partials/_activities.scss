@@ -1,0 +1,85 @@
+.activities {
+    background-color: $bg-light-green;
+    padding: 130px 0 60px 0;
+    width: 100%;
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+        color: $white;
+        margin-bottom: 80px;
+        text-transform: uppercase;
+        span {
+            color: #e4eab9;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            display: inline-block;
+            background-color: $white;
+            text-align: center;
+        }
+    }
+    @include mq (760px) {
+        padding: 130px 10px 60px 10px;
+    }
+}
+
+.what-to-do {
+    width: 270px;
+    display: inline-block;
+    margin-right: 26px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+    &:nth-child(4) {
+        margin-right: 0;
+    }
+    h6 {
+        font-size: 18px;
+        line-height: 24px;
+        color: $white;
+        text-transform: uppercase;
+        margin-top: 20px;
+        @include mq (760px) {
+            margin-left: 10px;
+        }
+    }
+    p {
+        color: #e4eab9;
+        font-size: 14px;
+        line-height: 23px;
+        margin-top: 20px;
+        &:after {
+            content: '---';
+            color: white;
+            display: block;
+            margin-top: 10px;
+        }
+        @include mq (760px) {
+            margin: 20px 10px 0;
+        }
+    }
+    @include mq (1200px) {
+        width: 21.9%;
+    }
+    @include mq (760px) {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
+}
+
+.what-to-do:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+    @include mq (760px) {
+        transform: none;
+    }
+}

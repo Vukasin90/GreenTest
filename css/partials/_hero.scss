@@ -1,0 +1,113 @@
+.hero-section {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+}
+
+.hero {
+    max-width: 1860px;
+    margin: 0 auto;
+    height: 750px;
+    position: relative;
+    h1 {
+        color: $white;
+        font-size: 48px;
+        line-height: 23px;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        top: 335px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include mq (1192px) {
+            font-size: 30px;
+        }
+        @include mq (767px) {
+            font-size: 21px;
+            top: 200px;
+            width: 261px;
+        }
+    }
+    p {
+        color: $white;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 23px;
+        margin-top: 25px;
+        position: absolute;
+        top: 372px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include mq (1192px) {
+            font-size: 14px;
+        }
+        @include mq (767px) {
+            top: 211px;
+            text-align: center;
+            width: 261px;
+        }
+    }
+    .hero-left, .hero-right {
+        position: absolute;
+        top: 50%;
+        color: $white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .hero-left {
+        left: 40px;
+        @include mq (767px) {
+            left: 0;
+        }
+    }
+    .hero-right {
+        right: 40px;
+        @include mq (767px) {
+            right: 0;
+        }
+    }
+    @include mq (767px) {
+        height: 500px;
+    }
+}
+
+.hero-cta {
+    width: 270px;
+    height: 80px;
+    background-color: $theme-green;
+    border: 5px solid $white;
+    position: absolute;
+    left: 50%;
+    top: 829px;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    span {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        color: $white;
+        text-transform: uppercase;
+        &:nth-child(1) {
+            &:after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 50px;
+                background: white;
+                text-align: center;
+                margin: 5px;
+                transform: translateX(61%);
+            }
+        }
+    }
+}
+
+@include mq (767px) {
+    .hero-cta {
+        top: 500px;
+    }
+}

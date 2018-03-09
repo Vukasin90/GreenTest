@@ -1,0 +1,143 @@
+.navigation {
+    padding: 30px 30px;
+    height: 120px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+@media (min-width: 1001px) {
+    .nav {
+        float: right;
+        line-height: 55px;
+        ul {
+            display: inline-block;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 15px;
+            a {
+                text-decoration: none;
+                color: $txt-grey;
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 24px;
+                &:hover {
+                    color: #009aa3;
+                }
+            }
+            &:after {
+                content: '/';
+                display: inline-block;
+                margin-left: 15px;
+                color: $theme-green;
+            }
+            &:nth-child(4) {
+                margin-right: 100px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .active {
+            color: #009aa3;
+        }
+        .button {
+            width: 117px;
+            height: 35px;
+            border: none;
+            background-color: $theme-green;
+            text-transform: uppercase;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
+
+@include mq (1000px) {
+    .nav {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 110px;
+        background-color: $white;
+        z-index: 2;
+        padding: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        ul {
+            text-align: center;
+        }
+        li {
+            border-bottom: 1px solid $txt-light-grey;
+            padding: 20px;
+            list-style: none;
+        }
+        a {
+            font-size: 20px;
+        }
+        .button {
+            width: 100%;
+            height: 35px;
+            border: none;
+            padding: 10px 10px 10px;
+            background-color: $theme-green;
+            text-transform: uppercase;
+            color: $white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    }
+    .icon {
+        position: absolute;
+        right: 19px;
+        top: 30px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    .hamburger {
+        height: 5px;
+        width: 50px;
+        background-color: $txt-dark-grey;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .2s ease-in-out;
+        &::before, &::after {
+            content: '';
+            height: 5px;
+            width: 50px;
+            background-color: $txt-dark-grey;
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+        &::before {
+            top: -16px;
+        }
+        &::after {
+            top: 16px;
+        }
+    }
+    .open-hamburger {
+        max-height: 500px;
+    }
+    .icon.active-ham-menu .hamburger {
+        background-color: rgba($txt-dark-grey, 0);
+        transition: all .2s ease-in-out;
+    }
+    .icon.active-ham-menu .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: all .2s ease-in-out;
+    }
+    .icon.active-ham-menu .hamburger::after {
+        transform: rotate(135deg);
+        top: 0;
+        transition: all .2s ease-in-out;
+    }
+}

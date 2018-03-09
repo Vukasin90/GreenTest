@@ -1,0 +1,57 @@
+.contact {
+    width: 100%;
+    height: 200px;
+    background-color: #f2f3ea;
+    padding-top: 50px;
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+        color: $txt-dark-grey;
+        text-align: center;
+        @include mq (767px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.form-wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 100px;
+    position: relative;
+    form {
+        margin-top: 20px;
+        input {
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: $white;
+            padding: 0px 0 0 20px;
+            &::placeholder {
+                font-size: 14px;
+                line-height: 22px;
+                color: $txt-light-grey;
+            }
+        }
+    } 
+    .form-button {
+        width: 115px;
+        height: 35px;
+        background-color: $theme-green;
+        position: absolute;
+        right: 106px;
+        top: 8px;
+        padding: 0;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        @include mq (767px) {
+            right: 5%;
+        }
+    }
+    @include mq (767px) {
+        padding: 0 5px;
+    }
+}
+
+
